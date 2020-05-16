@@ -1,6 +1,0 @@
----
-layout: post
-title: GOLD LOAN IN PATNA
-desc: THIS  IS PATNA SPECIFIC TEXT
----
-WHTA IS THIS BODY FOR BROTHER
