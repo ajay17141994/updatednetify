@@ -5,10 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+   *{box-sizing: border-box;}
     html, body{padding:0;margin:0;font-family: Arial, Helvetica, sans-serif;}
-    .cityhead{font-size: 20px;font-weight: 600;color:#000};
-    .description{font-size: 16px;font-weight: 300;color: inherit;}
-    .mainContainer{display: block;width: 85%;margin:0 auto;}
+    .cityhead{font-size: 26px;font-weight: 600;color:#000;padding:10px 10px;text-align: justify;} 
+    .headpara{padding:0px 0px 0px 0px;margin:2px 0px}
+    .descriptionWrapper{font-size: 16px;font-weight: 300;color: inherit;text-align: justify;}
+    .mainContainer{display: block;width: 90%;margin:0 auto;}
+    .cityName{color:#B2B2FF;font-size:30px;font-weight: 700;}
+    .advantages-container{display: block;width:100%;background-color: #DCDCDC;padding: 15px;}
+.advantages-heading{display: block;font-size: 2.5rem;font-weight: 700;font-family: Arial, Helvetica, sans-serif;text-align: center;color:#000}
+.advantagesInner-wrapper{display: flex;width:100%;justify-content: space-evenly;padding: 10px 0;}
+.advantages-left, .advantages-rgt{min-width:40%;background-color: #C0C0C0;color:#000;padding: 10px;}
+.advantages-left p, .advantages-rgt p{margin: 0px 0px 0px 0px;}
+
+.testimonial-inner-wrap{display: flex;width:100%;justify-content: space-evenly;padding: 10px 0;}
+.testimonial-icon{}
+.testimonial-icon img{width:150px;height: 100px;}
+.testimonial-content-wrapper{min-width: 50%;color:#000;padding: 0px 10px;padding: 15px;}
+.testimonial-content-wrapper p{margin:0px 0px 0px 0px;font-family: Arial, Helvetica, sans-serif;}
+.testimonial-head{font-size: 20px;font-weight: 600;}
+.testimonial-content{font-size: 16px;font-weight: 300;}
+.subWrapper{padding:15px 0}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
     .topnav {
 overflow: hidden;
 background-color: #FF8C00	;
@@ -62,12 +93,32 @@ background-color: #FF8C00	;
 </style>
 </head>
 <body>
-
-<div class="mainContainer">
-    {% include header.html %}
-    {% include allpost.html %}
-    {{ content }}
-    {% include staticdata.html  %}
+<div class="outerContainer">
+  {% include header.html %}
+  <div class="mainContainer">
+      
+      {% include allpost.html %}
+      {{ content }}
+      {% include staticdata.html  %}
+      <div class="subWrapper">
+        {% include advantages_rupeek.html %}
+      </div>
+      <div class="subWrapper">
+        {% include tableinfo_one.html %}
+      </div>
+      <div class="subWrapper">
+        {% include testimonial_rupeek.html %}
+      </div>
+      <div class="subWrapper">
+        {% include advantages_rupeek.html %}
+      </div>
+      <div class="subWrapper">
+        {% include tableinfo_two.html %}
+      </div>
+      <div class="subWrapper">
+        {{page.sub_footerData}}
+      </div>  
+  </div>
 </div>
 
 

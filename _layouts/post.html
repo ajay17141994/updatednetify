@@ -5,9 +5,17 @@ author: "abhay kumar"
 
 <div class="postContainer">
     <div>
-        <p class="cityhead">{{ page.key }}</p>
+        <div class="cityhead">
+            <p class="headpara">
+                <span>{{ page.heading_one }}</span>
+            </p>
+            <p class="headpara">
+                <span>{{page.heading_two}}</span>
+                <span class="cityName">{{page.heading_three}}</span>
+            </p>
+        </div>
     </div>
-    <div>
-        <p class="description">{{ page.description }}</p>
+    <div class="descriptionWrapper">
+        <p class="description">{{ page.content }}</p>
     </div>
 </div>
